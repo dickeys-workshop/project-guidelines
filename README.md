@@ -46,6 +46,46 @@ There are a set of rules to keep in mind:
     
     _Why:_
     >This way, you can make sure that code is always from stable branch.
+    
+===== Examples
+
+Create a new topic branch from `master` (see the link:./concepts-summary.adoc[Concepts Summary] for a good naming
+convention):
+
+ (master) $ git checkout -b topic-branch
+
+Switched to a new branch 'topic-branch'
+
+ (topic-branch) $
+
+Now develop your topic, committing as you go. Write good commit messages. Use git rebase to make an easily reviewable
+series of commits.
+
+Once your branch is ready for a review (or simply to back it up), push it to the server:
+
+ (topic-branch) $ git push --set-upstream origin topic-branch
+
+You can continue to work on this branch, and use git push to make your changes visible for code review.
+
+If you have long-running development of a feature, you will probably fall behind the `master` branch. If your branch has
+not been merged to another branch (e.g., `next`) yet, you can rebase/replay your changes on top of the latest `master`
+using
+
+ (topic-branch) $ git rebase master
+
+You can continue to interactively rebase a topic to make an easily reviewable series of commits until your branch has
+been merged to `next`. After that, generally only push new commits to your branch (you can still rebase new commits
+locally before pushing to the remote).
+
+ (topic-branch) $ git rebase -i master
+
+===== Visualization
+
+Result of branching from `master` and committing twice:
+
+image:images/creating-a-topic.png[image]
+
+(https://codepen.io/rocketraman/pen/VbdOXd[https://codepen.io/rocketraman/pen/VbdOXd])
 
 * Never push into `release` or `master` branch. Make a Pull Request.
     
