@@ -63,25 +63,20 @@ series of commits.
    ```
    You can continue to work on this branch, and use git push to make your changes visible for code review.
    If you have long-running development of a feature, you will probably fall behind the `master` branch. If your branch has
-not been merged to another branch (e.g., `develop`) yet, you can rebase/replay your changes on top of the latest `master`
+not been merged to another branch (e.g., `release`) yet, you can rebase/replay your changes on top of the latest `master`
 using
    ```sh
    (feature/branchname) $ git rebase master
    ```
    
     You can continue to interactively rebase a topic to make an easily reviewable series of commits until your branch has
-been merged to `develop`. After that, generally only push new commits to your branch (you can still rebase new commits
+been merged to `release`. After that, generally only push new commits to your branch (you can still rebase new commits
 locally before pushing to the remote).
 
  (topic-branch) $ git rebase -i master
 
 ===== Visualization
 
-Result of branching from `master` and committing twice:
-
-image:images/creating-a-topic.png[image]
-
-(https://codepen.io/rocketraman/pen/VbdOXd[https://codepen.io/rocketraman/pen/VbdOXd])
 
 * Never push into `release` or `master` branch. Make a Pull Request.
     
