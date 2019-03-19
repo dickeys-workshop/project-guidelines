@@ -42,17 +42,17 @@ There are a set of rules to keep in mind:
     
     _Why:_
     >Because this way all work is done in isolation on a dedicated branch rather than the main branch. It allows you to submit multiple pull requests without confusion. You can iterate without polluting the master branch with potentially unstable, unfinished code. [read more...](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow)
-* Branch out from `develop`
+* Branch out from `master`
     
     _Why:_
-    >This way, you can make sure that code in master will almost always build without problems, and can be mostly used directly for releases (this might be overkill for some projects).
+    >This way, you can make sure that code is always from stable branch.
 
-* Never push into `develop` or `master` branch. Make a Pull Request.
+* Never push into `release` or `master` branch. Make a Pull Request.
     
     _Why:_
     > It notifies team members that they have completed a feature. It also enables easy peer-review of the code and dedicates forum for discussing the proposed feature.
 
-* Update your local `develop` branch and do an interactive rebase before pushing your feature and making a Pull Request.
+* Update your local `feature-branch` branch and do an interactive rebase before pushing your feature and making a Pull Request.
 
     _Why:_
     > Rebasing will merge in the requested branch (`master` or `develop`) and apply the commits that you have made locally to the top of the history without creating a merge commit (assuming there were no conflicts). Resulting in a nice and clean history. [read more ...](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
