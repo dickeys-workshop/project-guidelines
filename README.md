@@ -73,9 +73,11 @@ using
 been merged to `release`. After that, generally only push new commits to your branch (you can still rebase new commits
 locally before pushing to the remote).
 
+ ```sh
  (topic-branch) $ git rebase -i master
+ ```
 
-===== Visualization
+ Visualization
 
 
 * Never push into `release` or `master` branch. Make a Pull Request.
