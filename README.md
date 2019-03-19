@@ -47,11 +47,11 @@ There are a set of rules to keep in mind:
     _Why:_
     >This way, you can make sure that code is always from stable branch.
     
-    Create a new topic branch from `master` (see the link:./concepts-summary.adoc[Concepts Summary] for a good naming
+    Create a new feature branch from `master` (see the link:./concepts-summary.adoc[Concepts Summary] for a good naming
 convention):
 
    ```sh
-   (master) $ git checkout -b topic-branch
+   (master) $ git checkout -b <branchname>
    (topic-branch) $
    ```
 
