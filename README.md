@@ -47,16 +47,13 @@ There are a set of rules to keep in mind:
     _Why:_
     >This way, you can make sure that code is always from stable branch.
     
-===== Examples
-
 Create a new topic branch from `master` (see the link:./concepts-summary.adoc[Concepts Summary] for a good naming
 convention):
 
- (master) $ git checkout -b topic-branch
-
-Switched to a new branch 'topic-branch'
-
- (topic-branch) $
+   ```sh
+   (master) $ git checkout -b topic-branch
+   (topic-branch) $
+   ```
 
 Now develop your topic, committing as you go. Write good commit messages. Use git rebase to make an easily reviewable
 series of commits.
