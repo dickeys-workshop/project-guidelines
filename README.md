@@ -46,12 +46,13 @@ There are a set of rules to keep in mind:
     
     _Why:_
     >This way, you can make sure that code is always from stable branch.
+
     Create a new feature branch from `master` (TODO:naming-branches):
 
-   ```sh
-   (master) $ git checkout -b <feature/branchname>
-   (feature/branchname) $
-   ```
+    ```sh
+    (master) $ git checkout -b <feature/branchname>
+    (feature/branchname) $
+    ```
 
     Now develop your topic, committing as you go. Write good commit messages. Use git rebase to make an easily reviewable
 series of commits.
